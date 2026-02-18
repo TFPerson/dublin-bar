@@ -13,7 +13,6 @@ body {
     color: #f4f1e8;
 }
 
-/* NAVBAR */
 nav {
     background-color: #081a12;
     padding: 12px 20px;
@@ -23,7 +22,6 @@ nav img {
     height: 45px;
 }
 
-/* HERO */
 .hero {
     min-height: 70vh;
     background-image: url("DUBLIN_WEB/interior.jpg");
@@ -64,7 +62,6 @@ nav img {
     font-weight: bold;
 }
 
-/* GALERIA */
 .galeria {
     display: flex;
     gap: 20px;
@@ -79,7 +76,6 @@ nav img {
     border-radius: 12px;
 }
 
-/* COMIDA */
 .comida {
     background-color: #0f2a1f;
     padding: 30px 15px;
@@ -93,14 +89,24 @@ nav img {
     border-radius: 12px;
 }
 
-/* HORARIO */
+.video {
+    background-color: #081a12;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+video {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+}
+
 .horario {
     text-align: center;
     padding: 30px 15px;
-    background-color: #081a12;
+    background-color: #0f2a1f;
 }
 
-/* MAPA */
 .mapa {
     padding: 30px 15px;
     text-align: center;
@@ -111,7 +117,6 @@ iframe {
     max-width: 700px;
 }
 
-/* FOOTER */
 footer {
     background-color: black;
     padding: 20px;
@@ -119,7 +124,6 @@ footer {
     color: #c8b88a;
 }
 
-/* COOKIES */
 #cookieBanner {
     position:fixed;
     bottom:0;
@@ -133,19 +137,15 @@ footer {
     z-index:999;
 }
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
-
 .hero h1 {
     font-size: 30px;
 }
-
 .btn {
     display:block;
     width:80%;
     margin:10px auto;
 }
-
 }
 </style>
 </head>
@@ -161,7 +161,6 @@ footer {
         <img src="logo.png">
         <h1>Dublin Bar</h1>
         <p>Comida, cerveza y ambiente irlandés en Logroño</p>
-
         <a class="btn" href="carta.html">Ver carta</a>
         <a class="btn" href="tel:941483280">Llamar</a>
     </div>
@@ -178,6 +177,13 @@ footer {
     <img src="DUBLIN_WEB/burger.jpg">
 </section>
 
+<section class="video">
+    <h2>Recorre el Dublin Bar</h2>
+    <video controls autoplay muted loop>
+        <source src="DUBLIN_WEB/bar360.mp4" type="video/mp4">
+    </video>
+</section>
+
 <section class="horario">
     <h2>Horario</h2>
     <p>Lunes a Domingo</p>
@@ -186,14 +192,9 @@ footer {
 
 <section class="mapa">
     <h2>Dónde estamos</h2>
-
-    <iframe
-        src="https://www.google.com/maps?q=Avenida+Zaragoza+6+Logroño&output=embed"
-        height="350"
-        style="border:0; border-radius:10px;"
-        loading="lazy">
+    <iframe src="https://www.google.com/maps?q=Avenida+Zaragoza+6+Logroño&output=embed"
+        height="350" style="border:0; border-radius:10px;" loading="lazy">
     </iframe>
-
     <p>Avenida Zaragoza 6-8, Logroño</p>
 </section>
 
@@ -207,7 +208,6 @@ footer {
     <p style="margin-top:10px;">Web creada por vendera</p>
 </footer>
 
-<!-- COOKIES -->
 <div id="cookieBanner">
 Este sitio web utiliza cookies básicas.
 <a href="privacidad.html" style="color:#c8b88a;">Privacidad</a> ·
@@ -220,7 +220,6 @@ function aceptarCookies() {
     localStorage.setItem("cookiesAceptadas", "true");
     document.getElementById("cookieBanner").style.display = "none";
 }
-
 window.onload = function() {
     if (!localStorage.getItem("cookiesAceptadas")) {
         document.getElementById("cookieBanner").style.display = "block";
